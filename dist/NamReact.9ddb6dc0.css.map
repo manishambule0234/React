@@ -1,0 +1,1 @@
+{"mappings":"ACAA","sources":["NamReact.9ddb6dc0.css","index.css"],"sourcesContent":["#container {\n  background-color: #e7e8bd;\n}\n/*# sourceMappingURL=NamReact.9ddb6dc0.css.map */\n","#container {\r\n    background-color: rgb(231, 232, 189);\r\n}"],"names":[],"version":3,"file":"NamReact.9ddb6dc0.css.map"}
