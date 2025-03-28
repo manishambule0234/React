@@ -693,28 +693,98 @@ var _react = require("react");
 var _reactDefault = parcelHelpers.interopDefault(_react);
 var _client = require("react-dom/client");
 var _clientDefault = parcelHelpers.interopDefault(_client);
-const heading1 = /*#__PURE__*/ (0, _reactDefault.default).createElement("h1", {
-    id: "title",
-    key: "h1"
-}, "Heading 1 for parcel");
-console.log(heading1);
-const heading2 = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+//React.createElement => Object => HTML(DOM)
+// const heading1 = React.createElement(
+// "h1",
+// {
+// id: "title" ,
+// key: "h1"
+// },
+// "Heading 1 for parcel"
+// );
+// console.log(heading1)
+// JSX => React.createElement => Object => HTML(DOM)
+const heading = /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
     id: "title",
     children: "Namaste React"
 }, "h2", false, {
     fileName: "App.js",
-    lineNumber: 27,
-    columnNumber: 18
+    lineNumber: 37,
+    columnNumber: 17
 }, undefined);
-const container = /*#__PURE__*/ (0, _reactDefault.default).createElement("div", {
-    id: "container",
-    hello: "world"
-}, [
-    heading1,
-    heading2
-]);
+// const container = React.createElement(
+//     "div",
+//     {
+//         id: "container",
+//         hello: "world",
+//     },
+//     [heading1,heading2]
+// );
+//React Component
+//->Functional Component :New way of writing component
+//->Class Component :Old way of writing component
+//Name of component should start with Capital letter-its not a rule but a convention
+//Functional Component:It is a normal function
+// const HeaderComponent = () => {
+//     // return <div><h1>Namaste React functional component</h1><h2>This is a h2 tag</h2></div>;
+//     return (
+//         <div>
+//             <h1>Namaste React functional component</h1>
+//             <h2>This is a h2 tag</h2>
+//         </div>
+//     );
+// };
+const Title = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h1", {
+        id: "title",
+        children: "Namaste React from functional component"
+    }, "h2", false, {
+        fileName: "App.js",
+        lineNumber: 65,
+        columnNumber: 21
+    }, undefined);
+_c = Title;
+var xyz = 10;
+const HeaderComponent = ()=>/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("div", {
+        children: [
+            heading,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(Title, {}, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 70,
+                columnNumber: 18
+            }, undefined),
+            console.log(xyz),
+            7,
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "Namaste React functional component"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 77,
+                columnNumber: 17
+            }, undefined),
+            /*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)("h2", {
+                children: "This is a h2 tag"
+            }, void 0, false, {
+                fileName: "App.js",
+                lineNumber: 78,
+                columnNumber: 17
+            }, undefined)
+        ]
+    }, void 0, true, {
+        fileName: "App.js",
+        lineNumber: 67,
+        columnNumber: 31
+    }, undefined);
+_c1 = HeaderComponent;
 const root = (0, _clientDefault.default).createRoot(document.getElementById("root"));
-root.render(container);
+root.render(heading);
+root.render(/*#__PURE__*/ (0, _jsxDevRuntime.jsxDEV)(HeaderComponent, {}, void 0, false, {
+    fileName: "App.js",
+    lineNumber: 82,
+    columnNumber: 13
+}, undefined));
+var _c, _c1;
+$RefreshReg$(_c, "Title");
+$RefreshReg$(_c1, "HeaderComponent");
 
   $parcel$ReactRefreshHelpers$4931.postlude(module);
 } finally {
